@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar Studio</title>
+    <meta name="description" content="A polished single-page website combining responsive design, a carousel, and a live public API." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top">Northstar Studio</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#features">Features</a>
+          <a href="#carousel">Carousel</a>
+          <a href="#api">API</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Advanced Styling &amp; JavaScript</p>
+            <h1>One polished experience that blends design, interaction, and live data.</h1>
+            <p>
+              This responsive one-page website showcases a modern UI, an interactive carousel,
+              and a public API request with graceful loading and error states.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#carousel">Explore Carousel</a>
+              <a class="btn btn-secondary" href="#api">View Live Joke</a>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Highlights">
+            <h2>What you will see</h2>
+            <ul>
+              <li>Flexible layouts for desktop, tablet, and mobile</li>
+              <li>Animated controls for image browsing</li>
+              <li>Fresh data fetched from a public API</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Responsive Feature Cards</p>
+            <h2>Designed to adapt smoothly across every screen size.</h2>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <h3>Flexible Layout</h3>
+              <p>Grid-based cards reflow elegantly from large screens to smaller devices.</p>
+            </article>
+            <article class="card">
+              <h3>Modern Motion</h3>
+              <p>Hover effects and transitions create an inviting experience without overwhelming the page.</p>
+            </article>
+            <article class="card">
+              <h3>Live Content</h3>
+              <p>Dynamic sections keep the experience fresh through JavaScript-driven interactions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="carousel">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Interactive Image Carousel</p>
+            <h2>Browse polished content with simple navigation controls.</h2>
+          </div>
+
+          <div class="carousel" aria-label="Featured highlights">
+            <button class="carousel-btn prev" type="button" data-action="prev" aria-label="Previous slide">
+              &#8592;
+            </button>
+            <div class="carousel-track"></div>
+            <button class="carousel-btn next" type="button" data-action="next" aria-label="Next slide">
+              &#8594;
+            </button>
+          </div>
+          <div class="carousel-dots" role="tablist" aria-label="Carousel navigation"></div>
+        </div>
+      </section>
+
+      <section class="section" id="api">
+        <div class="container api-grid">
+          <div class="api-copy">
+            <p class="eyebrow">Public API Data</p>
+            <h2>Fetch a fresh joke from a public source.</h2>
+            <p>
+              The data section uses the Fetch API and displays loading states while waiting for a response.
+            </p>
+            <button class="btn btn-primary" id="refreshJoke" type="button">Load another joke</button>
+          </div>
+
+          <div class="api-card">
+            <div class="status-pill" id="apiStatus">Ready</div>
+            <div class="loader" id="jokeLoader" hidden>Loading...</div>
+            <div class="joke-output" id="jokeOutput">Tap the button to fetch a joke.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Northstar Studio. Crafted for an advanced styling and JavaScript assignment.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
